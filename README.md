@@ -107,12 +107,12 @@ auto-build-react-redux
 (Move up and down to reveal more choices)
 ```
 
-### build : 如果你不需要改动任何react部分 仅仅是 根据redux的配置项生成 redux 就执行这么命令 这个命令对于react是没有副作用的  
-### create HTML : 如果你想新建个html页面 就选择这个 这个命令会在entry下生成一个新的文件 作为新的spa页面的入口 （注意不要和已有的文件名重复，这样会覆盖掉已有的文件，那你写好的东西就gg了）
-### create HTML's Cmpt and HTML's View according to redux-data : 如果你有一个新的html 已经配置好了 redux-data 想单独的生成这个html的所有模块 （开发进行中的时候，不要选择已经添加代码的html，这样会覆盖掉已有的代码）  
-### create View according to redux-data ： 在已经有的spa中，想添加一个新的view层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
-### create Component according to redux-data ： 在已经有的spa中，想添加一个新的Component层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
-### create Component according to redux-data ： 项目刚启动，已经有redux-data了  src下还是空的  那么选择这个
+> build : 如果你不需要改动任何react部分 仅仅是 根据redux的配置项生成 redux 就执行这么命令 这个命令对于react是没有副作用的  
+> create HTML : 如果你想新建个html页面 就选择这个 这个命令会在entry下生成一个新的文件 作为新的spa页面的入口 （注意不要和已有的文件名重复，这样会覆盖掉已有的文件，那你写好的东西就gg了）
+> create HTML's Cmpt and HTML's View according to redux-data : 如果你有一个新的html 已经配置好了 redux-data 想单独的生成这个html的所有模块 （开发进行中的时候，不要选择已经添加代码的html，这样会覆盖掉已有的代码）  
+> create View according to redux-data ： 在已经有的spa中，想添加一个新的view层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
+> create Component according to redux-data ： 在已经有的spa中，想添加一个新的Component层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
+> create Component according to redux-data ： 项目刚启动，已经有redux-data了  src下还是空的  那么选择这个
 </span>
 <span id='2.6'>
 2.6 打包  
@@ -242,21 +242,22 @@ views 是这个spa页面有多少个view（相对于react-router-dom）包含了
 </span>
 <span id='3.5'>    
 3.5 webpack 介绍
-
+```
 ├── config    &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;配置文件   
 │ &nbsp; &nbsp;  └── entry.js &#8195;&nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;入口   
 │ &nbsp; &nbsp;  └── optimization.js &nbsp;&nbsp;&#8195;//&#8195;优化   
 │ &nbsp; &nbsp;  └── plugins.js &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;插件   
 │ &nbsp; &nbsp;  └── rules.js &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;loader       
-└── viewBabel  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;生成html的模板 
+└── viewBabel  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;生成html的模板
+``` 
 
 entry是直接写的读取entry下所有  
 
 optimization 里面包含了拆分第三方包 和生产模式下去除console  
-**引用其他包可以继续拆分 例如echarts等等**
+>**引用其他包可以继续拆分 例如echarts等等**
 
 plugins 里面包含了清除文件的插件 单独提取css 生成html 插入srcipt的插件  
-**这里面需要自己更改一个引入机制的东西 HtmlWebpackPlugin中的chunks 现在默认是所有模块均引入react和自己的那部分js 在实际开发中 可能还会需要echarts  antd等等这种有的页面需要 有的页面不需要的第三方包 所以需要自行更改**  
+>**这里面需要自己更改一个引入机制的东西 HtmlWebpackPlugin中的chunks 现在默认是所有模块均引入react和自己的那部分js 在实际开发中 可能还会需要echarts  antd等等这种有的页面需要 有的页面不需要的第三方包 所以需要自行更改**  
 
 rules 里面包含的是loader
 
