@@ -42,51 +42,51 @@ npm install auto-build-react-redux -g
 <h2 id='1'>
 1.脚手架简介
 </h2>
-<h3 id='1.1'>
+<span id='1.1'>
 1.1 开发脚手架的原因    
 
 本人写前端的路程是 jquery=> react=> react全家桶，个人比较喜欢装饰着模式的react，但对于flux并不是很感兴趣，而且在开发中，发生新加页面，新加模块，redux要配置好多东西，但是我偏偏不想关注redux做了什么，只是当一个中央数据库，只有少量的公用数据才会放到redux中，从而推动我写了一个这样半自动化的工具。
 
 主要功能：通过配置文件生成redux，在开发过程中只需要关注react 而忽视redux的内容，顺便附带了新建html 新建view 新建cmpt的小工具
-</h3>
-<h3 id='1.2'>
+</span>
+<span id='1.2'>
 1.2 写在前面的话    
 
 本项目适合快速开发 快速迭代 性能问题并未考虑在内
-</h3>
+</span>
 
 <h2 id='2'>
 2.如何使用
 </h2>
-<h3 id='2.1'>
+<span id='2.1'>
 2.1 ui版本
 
 ui采用antd  由于antd3.9以后对icon进行打包 体积过大 本项目采用的antd@3.8.4
-</h3>
-<h3 id='2.2'>
+</span>
+<span id='2.2'>
 2.2 创建demo
 
 ```
 auto-build-react-redux init --demo
 ```
-</h3>
-<h3 id='2.3'>
+</span>
+<span id='2.3'>
 2.3 创建工程
 
 ```
 auto-build-react-redux init
 ```
-</h3>
+</span>
 
-<h3 id='2.4'>
+<span id='2.4'>
 2.4 使用命令
 
 ```
 auto-build-react-redux
 ```
-</h3>
+</span>
 
-<h3 id='2.5'>
+<span id='2.5'>
 2.5 命令详解
 
 
@@ -113,8 +113,8 @@ auto-build-react-redux
 ### create View according to redux-data ： 在已经有的spa中，想添加一个新的view层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
 ### create Component according to redux-data ： 在已经有的spa中，想添加一个新的Component层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
 ### create Component according to redux-data ： 项目刚启动，已经有redux-data了  src下还是空的  那么选择这个
-</h3>
-<h3 id='2.6'>
+</span>
+<span id='2.6'>
 2.6 打包  
 
 开发模式  
@@ -125,12 +125,12 @@ npm run dev
 ```
 npm run build
 ```
-</h3>
+</span>
 
 <h2 id='3'>
 3.项目简介
 </h2>
-<h3 id='3.1'>    
+<span id='3.1'>    
 3.1 项目结构
 
 ├── config    
@@ -151,8 +151,8 @@ npm run build
 ├── server.js  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;前端服务器    
 ├── theme.js   &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;antd的主题包文件   
 └── webpack.config.js  &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;webpack启动文件   
-</h3>  
-<h3 id='3.2'>    
+</span>  
+<span id='3.2'>    
 3.2 src 介绍
 
 src下一共有 1 + n（页面个数） 个文件夹 entry是webpack的入口文件   
@@ -166,8 +166,8 @@ src下一共有 1 + n（页面个数） 个文件夹 entry是webpack的入口文
 ├── model   &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;M   
 ├── redux    &nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;redux 相关文件（生成的）  
 └── view  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;V 
-</h3> 
-<h3 id='3.3'>    
+</span> 
+<span id='3.3'>    
 3.3 redux-data 介绍
 
 ├── config    &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;最终的配置文件       
@@ -232,15 +232,15 @@ index是唯一的 用到了什么state  可以全局设置什么
 components 是 这个spa页面有 多少个组件  每个组件和redux的关系
 views 是这个spa页面有多少个view（相对于react-router-dom）包含了什么组件 和redux的关系是什么
 
-</h3>
+</span>
 
-<h3 id='3.4'>    
+<span id='3.4'>    
 3.4 server 介绍
 
 这个没什么好说的 几个接口，两个默认路由，新建html以后 记得添加路由
 
-</h3>
-<h3 id='3.5'>    
+</span>
+<span id='3.5'>    
 3.5 webpack 介绍
 
 ├── config    &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;配置文件   
@@ -260,12 +260,12 @@ plugins 里面包含了清除文件的插件 单独提取css 生成html 插入sr
 
 rules 里面包含的是loader
 
-</h3>
+</span>
 
-<h3 id='3.6'>    
+<span id='3.6'>    
 3.6 其他
 
 demo介绍
 
 自己网站还没弄完，以后再补
-</h3>
+</span>
