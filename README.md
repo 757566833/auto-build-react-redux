@@ -67,6 +67,7 @@ ui采用antd  由于antd3.9以后对icon进行打包 体积过大 本项目采�
 </span>
 <h3  id='2.2'>2.2 创建demo</h3>
 <span>
+
 ```
 auto-build-react-redux init --demo
 ```
@@ -131,6 +132,7 @@ auto-build-react-redux
 2.6 打包 
 </h3>
 <span>
+
 开发模式  
 ```
 npm run dev
@@ -300,3 +302,7 @@ demo介绍
 
 自己网站还没弄完，以后再补
 </span>
+
+## License
+
+MIT
