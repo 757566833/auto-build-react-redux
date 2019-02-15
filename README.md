@@ -1,7 +1,7 @@
 auto-build-react-redux
 =========================
 
-脚手架包含了 [react](https://github.com/facebook/react) ,&nbsp; &nbsp; [react-redux](https://github.com/reduxjs/react-redux) ,&nbsp; &nbsp; [webpack](https://github.com/webpack/webpack).  
+脚手架包含了 [react](https://github.com/facebook/react) , [react-redux](https://github.com/reduxjs/react-redux) , [webpack](https://github.com/webpack/webpack).  
 开箱即用.
 
 [![build status](https://img.shields.io/travis/reduxjs/react-redux/master.svg?style=flat-square)](https://travis-ci.org/reduxjs/react-redux) [![npm version](https://img.shields.io/npm/v/react-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-redux)
@@ -20,24 +20,24 @@ npm install auto-build-react-redux -g
 ## Documentation
 
 [1.脚手架简介](#1)  
-&nbsp; &nbsp; [ 1.1 开发脚手架的原因](#1.1)  
-&nbsp; &nbsp; [ 1.2 写在前面的话](#1.2)  
+ [ 1.1 开发脚手架的原因](#1.1)  
+ [ 1.2 写在前面的话](#1.2)  
 
 [2.如何使用](#2)  
-&nbsp; &nbsp; [ 2.1 ui版本](#2.1)  
-&nbsp; &nbsp; [ 2.2 创建demo](#2.2)  
-&nbsp; &nbsp; [ 2.3 创建工程](#2.3)  
-&nbsp; &nbsp; [ 2.4 使用命令](#2.4)   
-&nbsp; &nbsp; [ 2.5 命令详解](#2.5) 
-&nbsp; &nbsp; [ 2.6 打包](#2.6)
+ [ 2.1 ui版本](#2.1)  
+ [ 2.2 创建demo](#2.2)  
+ [ 2.3 创建工程](#2.3)  
+ [ 2.4 使用命令](#2.4)   
+ [ 2.5 命令详解](#2.5) 
+ [ 2.6 打包](#2.6)
 
 [3.demo简介](#3)  
-&nbsp; &nbsp; [ 3.1 项目结构](#3.1)  
-&nbsp; &nbsp; [ 3.2 src 介绍](#3.2)  
-&nbsp; &nbsp; [ 3.3 redux-data 介绍](#3.3)
-&nbsp; &nbsp; [ 3.4 server 介绍](#3.4)  
-&nbsp; &nbsp; [ 3.5 webpack 介绍](#3.5)   
-&nbsp; &nbsp; [ 3.6 其他](#3.6) 
+ [ 3.1 项目结构](#3.1)  
+ [ 3.2 src 介绍](#3.2)  
+ [ 3.3 redux-data 介绍](#3.3)
+ [ 3.4 server 介绍](#3.4)  
+ [ 3.5 webpack 介绍](#3.5)   
+ [ 3.6 其他](#3.6) 
 
 <h2 id='1'>
 1.脚手架简介
@@ -108,12 +108,23 @@ auto-build-react-redux
 ```
 
 > build : 如果你不需要改动任何react部分 仅仅是 根据redux的配置项生成 redux 就执行这么命令 这个命令对于react是没有副作用的  
+
+
 > create HTML : 如果你想新建个html页面 就选择这个 这个命令会在entry下生成一个新的文件 作为新的spa页面的入口 （注意不要和已有的文件名重复，这样会覆盖掉已有的文件，那你写好的东西就gg了）
+
+
 > create HTML's Cmpt and HTML's View according to redux-data : 如果你有一个新的html 已经配置好了 redux-data 想单独的生成这个html的所有模块 （开发进行中的时候，不要选择已经添加代码的html，这样会覆盖掉已有的代码）  
+
+
 > create View according to redux-data ： 在已经有的spa中，想添加一个新的view层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
+
+
 > create Component according to redux-data ： 在已经有的spa中，想添加一个新的Component层级的模块， 那么更新redux-data 并执行此命令 就会单独的生成新模块所有的文件（不要选错，会覆盖已有的文件）
+
+
 > create Component according to redux-data ： 项目刚启动，已经有redux-data了  src下还是空的  那么选择这个
 </span>
+
 <span id='2.6'>
 2.6 打包  
 
@@ -135,23 +146,23 @@ npm run build
 
 ```
 ├── config    
-│ &nbsp; &nbsp;  └── routerConfig.jsx  &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;react-router-dom 的路由配置   
+│   └── routerConfig.jsx        // react-router-dom 的路由配置   
 ├── fetch  
-│ &nbsp; &nbsp;  └── fetch.jsx  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;fetch的封装 **http code** 做中间件的时候 要在这里插入  
+│   └── fetch.jsx               // fetch的封装 **http code** 做中间件的时候 要在这里插入  
 ├── node_modules                      
 ├── public   
-│ &nbsp; &nbsp;  └── asset  &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;前端服务器的静态文件  
+│   └── asset                   // 前端服务器的静态文件  
 ├── redux-data                          
-│ &nbsp; &nbsp;  ├── config  &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;redux的配置文件   
-│ &nbsp; &nbsp;  └── data  &nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;redux的数据   
+│   ├── config                  // redux的配置文件   
+│   └── data                    // redux的数据   
 ├── src    
-│ &nbsp; &nbsp;  └── entry &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;所有spa页面的入口文件  
-├── views  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;服务器的html 几个spa页面就有几个ejs    
-├── webpack  &nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;webpack的配置文件   
+│   └── entry                   // 所有spa页面的入口文件  
+├── views                       // 服务器的html 几个spa页面就有几个ejs    
+├── webpack                     // webpack的配置文件   
 ├── package.json          
-├── server.js  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;前端服务器    
-├── theme.js   &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;antd的主题包文件   
-└── webpack.config.js  &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;webpack启动文件   
+├── server.js                   // 前端服务器    
+├── theme.js                    // antd的主题包文件   
+└── webpack.config.js           // webpack启动文件   
 ```
 </span>  
 <span id='3.2'>    
@@ -162,22 +173,22 @@ src下一共有 1 + n（页面个数） 个文件夹 entry是webpack的入口文
 每个页面中  
 
 ```
-├── components    &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;V的组件   
-├── control  &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;C  
-│ &nbsp; &nbsp;  └── components &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;对应的cmpt   
-│ &nbsp; &nbsp;  └── view  &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;对应的view   
-├── index &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;入口文件 里面有react-router-dom  也是为了给context留出封装  
-├── model   &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;M   
-├── redux    &nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;redux 相关文件（生成的）  
-└── view  &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;V 
+├── components                  // V的组件   
+├── control                     // C  
+│   └── components              // 对应的cmpt   
+│   └── view                    // 对应的view   
+├── index                       // 入口文件 里面有react-router-dom  也是为了给context留出封装  
+├── model                       // M   
+├── redux                       // redux 相关文件（生成的）  
+└── view                        // V 
 ```
 </span> 
 <span id='3.3'>    
 3.3 redux-data 介绍
 
 ```
-├── config    &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;最终的配置文件       
-└── data  &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;引入的参数和方法 
+├── config                      //最终的配置文件       
+└── data                        //引入的参数和方法 
 ```
 以app为例
 ```
@@ -251,12 +262,12 @@ views 是这个spa页面有多少个view（相对于react-router-dom）包含了
 3.5 webpack 介绍
 
 ```
-├── config    &nbsp;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//&#8195;配置文件   
-│ &nbsp; &nbsp;  └── entry.js &#8195;&nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;入口   
-│ &nbsp; &nbsp;  └── optimization.js &nbsp;&nbsp;&#8195;//&#8195;优化   
-│ &nbsp; &nbsp;  └── plugins.js &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;//&#8195;插件   
-│ &nbsp; &nbsp;  └── rules.js &nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;loader       
-└── viewBabel  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8195;&#8195;&#8195;&#8195;//&#8195;生成html的模板
+├── config                     //配置文件   
+│   └── entry.js               //入口   
+│   └── optimization.js        //优化   
+│   └── plugins.js             //插件   
+│   └── rules.js               //loader       
+└── viewBabel                  //生成html的模板
 ``` 
 
 entry是直接写的读取entry下所有  
