@@ -3,11 +3,18 @@ auto-build-react-redux
 
 脚手架包含了 [react](https://github.com/facebook/react) , [react-redux](https://github.com/reduxjs/react-redux) , [webpack](https://github.com/webpack/webpack).  
 开箱即用.
-
-[![build status](https://img.shields.io/travis/reduxjs/react-redux/master.svg?style=flat-square)](https://travis-ci.org/reduxjs/react-redux) [![npm version](https://img.shields.io/npm/v/react-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-redux)
-[![npm downloads](https://img.shields.io/npm/dm/react-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-redux)
-[![redux channel on discord](https://img.shields.io/badge/discord-redux@reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
-
+<div style='display:flex'>
+<div style='display:flex'>
+    <div style='background-color:#5a5a5a;color:#ffffff;padding:0 5px;height:20px;font-size:12px'>node</div>
+    <div style='background-color:#0f80c1;color:#ffffff;padding:0 5px;height:20px;font-size:12px;'>v8.0.0+</div>
+</div>
+<div style='width:5px'></div>
+<div style='display:flex'>
+    <div style='background-color:#5a5a5a;color:#ffffff;padding:0 5px;height:20px;font-size:12px'>version</div>
+    <div style='background-color:#0f80c1;color:#ffffff;padding:0 5px;height:20px;font-size:12px;'>v0.0.1</div>
+</div> 
+</div>
+ 
 
 ## Installation
 
@@ -31,7 +38,7 @@ npm install auto-build-react-redux -g
     5. [命令详解](#2.5) 
     6. [打包](#2.6)
 
-3. [demo简介](#3)  
+3. [项目简介](#3)  
     1. [项目结构](#3.1)  
     2. [src 介绍](#3.2)  
     3. [redux-data 介绍](#3.3)
