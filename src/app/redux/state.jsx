@@ -1,2 +1,2 @@
-const state = {'language_type':'zh_cn','username':'user','mobile':'123456789'};
+const state = {'username':'user'};
 export default state;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom';
 import store from '../redux/store.jsx';
 import { Provider, connect } from 'react-redux';
 import mapStateToProps from './mapStateToProps.jsx';
@@ -23,10 +23,13 @@ class LoginRouter extends React.Component {
         );
     }
 }
-const LoginRedux = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(LoginRouter);
+const LoginRedux = 
+    withRouter(
+        connect(
+            mapStateToProps,
+            mapDispatchToProps
+        )(LoginRouter)
+    );
 const Login = () => <Provider store={store}>
     <BrowserRouter basename={indexRouter}>
         <LoginRedux />

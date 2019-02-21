@@ -1,11 +1,10 @@
 import IndexView_cmpt  from './IndexView_cmpt.jsx';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import mapStateToProps from './mapStateToProps.jsx';
 import mapDispatchToProps from './mapDispatchToProps.jsx';
 import { connect } from 'react-redux';
 
 IndexView_cmpt.propTypes = {
-    username:PropTypes.string.isRequired,
 
 };
 const IndexView = connect(

@@ -2,35 +2,11 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'Index':
             switch (action.func) {
-                case 'setLanguage_type':
-                    return {
-                        ...state,
-                        language_type: action.language_type
-                    };
+                
                 default:
                     return state;
             }
-        case 'Header':
-            switch (action.func) {
-                case 'setUsername':
-                    return {
-                        ...state,
-                        username: action.username
-                    };
-                case 'setMobile':
-                    return {
-                        ...state,
-                        mobile: action.mobile
-                    };
-                case 'setLanguage_type':
-                    return {
-                        ...state,
-                        language_type: action.language_type
-                    };
-                default:
-                    return state;
-            }
-        case 'Menus':
+        case 'User':
             switch (action.func) {
                 case 'setUsername':
                     return {
@@ -40,17 +16,7 @@ const reducer = (state, action) => {
                 default:
                     return state;
             }
-        case 'ArticleList':
-            switch (action.func) {
-                case 'setMobile':
-                    return {
-                        ...state,
-                        mobile: action.mobile
-                    };
-                default:
-                    return state;
-            }
-        case 'SearchHeader':
+        case 'Surprise':
             switch (action.func) {
                 
                 default:
@@ -58,21 +24,11 @@ const reducer = (state, action) => {
             }
         case 'IndexView':
             switch (action.func) {
-                case 'setUsername':
-                    return {
-                        ...state,
-                        username: action.username
-                    };
-                default:
-                    return state;
-            }
-        case 'SearchView':
-            switch (action.func) {
                 
                 default:
                     return state;
             }
-        case 'AdminView':
+        case 'SurpriseView':
             switch (action.func) {
                 
                 default:

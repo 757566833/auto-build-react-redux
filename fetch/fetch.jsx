@@ -4,7 +4,7 @@ const getFetch = (url, parameter) => {
     if (parameter) {
         for (const key in parameter) {
             if (parameter.hasOwnProperty(key)) {
-                parameterStr += (key + '=' + parameter[key] + '&');
+                parameterStr += `${key}=${parameter[key]}&`;
             }
         }
     }
@@ -18,14 +18,18 @@ const getFetch = (url, parameter) => {
         if (response.status == 200) {
             return response.text();
         } else {
-            return response.status;
+            if (response.status == 401) {
+                window.location.href = '/'
+            } else {
+                return response.status;
+            }
         }
     }, (error) => {
         error.message;
     });
 };
 const postFetch = (url, parameter) => {
-    return fetch(url , {
+    return fetch(url, {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
@@ -35,7 +39,11 @@ const postFetch = (url, parameter) => {
         if (response.status == 200) {
             return response.text();
         } else {
-            return response.status;
+            if (response.status == 401) {
+                window.location.href = '/'
+            } else {
+                return response.status;
+            }
         }
     }, (error) => {
         error.message;

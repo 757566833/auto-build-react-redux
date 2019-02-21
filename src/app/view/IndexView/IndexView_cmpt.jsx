@@ -1,12 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 // import Control from '../../control/view/IndexView';
-import Header from '../../components/Header/Header.jsx';
-import Menus from '../../components/Menus/Menus.jsx';
-import ArticleList from '../../components/ArticleList/ArticleList.jsx';
+import Index from '../../components/Index/Index.jsx';
+import User from '../../components/User/User.jsx';
 
 export let IndexViewRef;
-export default class IndexView extends React.Component {
-    constructor(props) {
+class IndexView extends React.Component{
+    constructor(props){
         super(props);
         IndexViewRef = this;
         this.isMount = true;
@@ -20,13 +20,13 @@ export default class IndexView extends React.Component {
     networkError = (code) => {
         alert(`网络错误${code}`);
     }
-    render() {
-        return (
+    render(){
+        return(
             <div>
-                <Header />
-                <Menus />
-                <ArticleList />
+                <Index />
+                <User />   
             </div>
         );
     }
 }
+export default withRouter(IndexView);

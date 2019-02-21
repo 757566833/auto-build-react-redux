@@ -1,52 +1,39 @@
 const {
     usernameState,
-    setUsername,
-    mobileState,
-    setMobile,
-    language_typeState,
-    setLanguage_type
+    setUsername
+
 } = require('../data/app/app')
 module.exports = {
     'app': {
         'index': {
-            'state': [language_typeState],
-            'func': [setLanguage_type]
+            'state': [],
+            'func': []
         },
         'components': {
-            'Header': {
-                'state': [usernameState, mobileState, language_typeState],
-                'func': [setUsername, setMobile, setLanguage_type]
+            'Index': {
+                'state': [usernameState],
+                'func': []
             },
-            'Menus': {
+            'User': {
                 'state': [usernameState],
                 'func': [setUsername]
             },
-            'ArticleList': {
-                'state': [mobileState],
-                'func': [setMobile]
-            },
-            'SearchHeader': {
-                'state': [],
+            'Surprise': {
+                'state': [usernameState],
                 'func': []
             }
         },
         'views': {
             'IndexView': {
-                'components': ['Header', 'Menus', 'ArticleList'],
-                'state': [usernameState],
-                'func': [setUsername]
-            },
-            'SearchView': {
-                'components': ['SearchHeader', 'ArticleList'],
+                'components': ['Index', 'User'],
                 'state': [],
                 'func': []
             },
-            'AdminView': {
-                'components': ['ArticleList'],
+            'SurpriseView': {
+                'components': ['Surprise'],
                 'state': [],
                 'func': []
             }
         }
     }
-
 }

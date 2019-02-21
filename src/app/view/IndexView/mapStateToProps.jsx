@@ -1,7 +1,6 @@
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
     return {
-        username: state.username,
 
     };
 };

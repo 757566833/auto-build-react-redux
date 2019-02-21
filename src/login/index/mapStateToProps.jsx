@@ -1,7 +1,6 @@
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
     return {
-        language_type: state.language_type,
 
     };
 };

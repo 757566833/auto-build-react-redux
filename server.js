@@ -7,13 +7,27 @@ const router = new Router();
 
 router.get('/hello', async (ctx) => {
     ctx.status = 200;
-    ctx.body = JSON.stringify(
-        {
-            code:0,
-            data:'serverHello!',
-            msg:''
-        }
-    );
+    ctx.body = JSON.stringify({
+        code: 0,
+        data: 'serverHello!',
+        msg: ''
+    });
+})
+router.get('/getMsg', async (ctx) => {
+    ctx.status = 200;
+    ctx.body = JSON.stringify({
+        code: 0,
+        data: '成功♂的气息!',
+        msg: ''
+    });
+})
+router.get('/noToken', async (ctx) => {
+    ctx.status = 401;
+    ctx.body = JSON.stringify({
+        code: 0,
+        data: '请先登录!',
+        msg: ''
+    });
 })
 router.get('/networkError', async (ctx) => {
     ctx.status = 500;
@@ -21,16 +35,17 @@ router.get('/networkError', async (ctx) => {
 })
 router.get('/interfaceError', async (ctx) => {
     ctx.status = 200;
-    ctx.body = JSON.stringify(
-        {
-            code:-1,
-            data:'',
-            msg:'interfaceError'
-        }
-    );
+    ctx.body = JSON.stringify({
+        code: -1,
+        data: '',
+        msg: 'interfaceError'
+    });
 })
 router.get('/login', async (ctx) => {
     await ctx.render('login')
+})
+router.get('/vcode', async (ctx) => {
+    await ctx.render('vcode')
 })
 router.get('/', async (ctx) => {
     await ctx.render('app')
@@ -41,10 +56,10 @@ router.get('/**', async (ctx) => {
 const app = new Koa();
 
 app.use(serve(path.join(__dirname, 'public'), {
-  maxage: 365 * 24 * 60 * 60 * 1000
+    maxage: 365 * 24 * 60 * 60 * 1000
 }));
 app.use(views(__dirname + '/views', {
-  extension: 'ejs'
+    extension: 'ejs'
 }))
 app.use(router.routes()).use(router.allowedMethods())
 

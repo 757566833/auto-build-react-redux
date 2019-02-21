@@ -4,7 +4,7 @@ export default class Control {
     // static async demo() {
     //     const result = await model();
     //     if (typeof result !== 'number') {
-    //            let data = eval('(' + result + ')');
+    //           let data = eval(`(${result})`);
     //           if (data.code == 0) {
     //                IndexViewRef.setfunc(data.data);
     //            } else {

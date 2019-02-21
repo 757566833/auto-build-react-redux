@@ -1,3 +1,4 @@
-var App = require('./app');
-var Login = require('./login');
-module.exports={...App,...Login};
+const app = require('./app');
+const login = require('./login');
+const vcode = require('./vcode');
+module.exports = { ...app, ...login, ...vcode,};
